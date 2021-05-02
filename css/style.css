@@ -8,6 +8,8 @@ html {
     height: 100%;
 }
 body {
+    height: 100%;
+    width: 100%;
     background-image: url("../img/pizza.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,11 +17,37 @@ body {
     background-position: center center;
     background-attachment: fixed;
     position: absolute;
-    /* padding-bottom: 90px; */
-    /* min-height: 100vh; */
-    height: 100%;
-    width: 100%;
+/*******************************************************/
+
+/*Animation*/
+    transition: 3s;
+    animation-name: animate;
+    animation-direction: alternate;
+    animation-duration: 25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    
 }
+/*End of animation*/
+
+/*Back ground pictures for animation*/
+@keyframes animate{
+    0%{
+        background-image: url("../img/pizza.jpg")
+    }
+
+    50%{
+        background-image: url("../img/burger-1553287_1920.jpg")
+    }
+    100%{
+        background-image: url("../img/fresh-orange-juice-1614822_1280.jpg")
+    }
+    
+}
+/**End of pictures/
+/*******************************************************************************/
 
 main {
     width: 90%;
@@ -43,6 +71,7 @@ main {
 .social-links {
     display: flex;
 }
+
 .social-links ul {
     padding: 10px;
     display: flex;
@@ -63,6 +92,12 @@ main {
     
 }
 
+.social-items a:hover{
+    font-size: 60px;
+}
+
+/*
+
 .text-background{
     background-color: rgba(255, 253, 251, 0.774);
     width: 50%;
@@ -72,6 +107,10 @@ main {
     
     
 }
+
+This was a css for a background txt on the center of the page
+*/
+
 
 .navbar{
     height: 15%;
@@ -88,3 +127,43 @@ main {
     box-sizing: border-box;
     
 }
+
+
+
+/*Main button*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+.container_btn {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+
+.btn-whatsapp {
+    width: 300px;
+    height: 100px;
+    border-color: white;
+    color: white;
+    background-color:  rgba(255, 255, 255, 0.116);
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 750;
+    letter-spacing: 4px;
+
+}
+
+.btn-whatsapp:hover{
+    cursor: pointer;
+    border-color: rgba(252,158,58,255);
+}
+
+/*End of main button CSS*/
